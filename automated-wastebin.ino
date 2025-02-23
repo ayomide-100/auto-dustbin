@@ -2,7 +2,7 @@
 const int trigPin = 3;
 const int echoPin = 2;
 const int ledPin = 7;
-const int buzzerPin = 8;  // Buzzer connected to pin 8
+const int buzzerPin = 8;  
 
 // Variables to store distance and duration
 long duration;
@@ -19,7 +19,7 @@ void setup() {
 }
 
 void loop() {
-  // Send a 10us pulse to trigger the sensor
+  // Send a pulse to trigger the sensor
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -45,9 +45,9 @@ void loop() {
     }
   }
 
-  // Print the distance for debugging
+  // Print the distance 
   Serial.print("Distance: ");
   Serial.println(distance);
 
-  delay(200);  // Small delay for sensor stability
+  delay(200);  // Small delay 
 }
